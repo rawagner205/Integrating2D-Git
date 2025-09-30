@@ -53,7 +53,7 @@ public class PlayerController : MonoBehaviour
         
     }
 
-    void OnTriggerEnter2D(Collider2D collision)
+    /*void OnTriggerEnter2D(Collider2D collision)
     {
         //If collided with Boost, increase maneuvering speed
         if (collision.CompareTag("Boost"))
@@ -68,7 +68,7 @@ public class PlayerController : MonoBehaviour
             lateralSpeed = 0f;
             forwardSpeed = -1.0f;
         }
-    }
+    } */
 
     void OnCollisionEnter2D(Collision2D collision)
     {

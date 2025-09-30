@@ -590,7 +590,7 @@ GameObject:
   - component: {fileID: 519420033}
   m_Layer: 0
   m_Name: Main Camera
-  m_TagString: MainCamera
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -882,11 +882,11 @@ GameObject:
   m_Component:
   - component: {fileID: 824941102}
   - component: {fileID: 824941101}
-  - component: {fileID: 824941100}
+  - component: {fileID: 824941103}
   - component: {fileID: 824941099}
   m_Layer: 0
   m_Name: CinemachineCamera
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -917,28 +917,9 @@ MonoBehaviour:
   Damping: {x: 0.5, y: 0.5}
   Lookahead:
     Enabled: 0
-    Time: 0
+    Time: 0.122
     Smoothing: 0
-    IgnoreY: 0
---- !u!114 &824941100
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 824941098}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b617507da6d07e749b7efdb34e1173e1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  TrackerSettings:
-    BindingMode: 4
-    PositionDamping: {x: 1, y: 1, z: 1}
-    AngularDampingMode: 0
-    RotationDamping: {x: 1, y: 1, z: 1}
-    QuaternionDamping: 1
-  FollowOffset: {x: 0, y: 0, z: -10}
+    IgnoreY: 1
 --- !u!114 &824941101
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -997,6 +978,25 @@ Transform:
   m_Children: []
   m_Father: {fileID: 238636765}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &824941103
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 824941098}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b617507da6d07e749b7efdb34e1173e1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  TrackerSettings:
+    BindingMode: 4
+    PositionDamping: {x: 1, y: 1, z: 1}
+    AngularDampingMode: 0
+    RotationDamping: {x: 1, y: 1, z: 1}
+    QuaternionDamping: 1
+  FollowOffset: {x: 0, y: 0, z: -10}
 --- !u!1001 &1477047542
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1065,6 +1065,10 @@ PrefabInstance:
     - target: {fileID: 4632939331777729264, guid: 69ca012dd90b53d43a88d9d29691c9e7, type: 3}
       propertyPath: m_Name
       value: WaterEffect
+      objectReference: {fileID: 0}
+    - target: {fileID: 4632939331777729264, guid: 69ca012dd90b53d43a88d9d29691c9e7, type: 3}
+      propertyPath: m_TagString
+      value: Player
       objectReference: {fileID: 0}
     - target: {fileID: 6021678637626613697, guid: 69ca012dd90b53d43a88d9d29691c9e7, type: 3}
       propertyPath: lengthInSec
@@ -1176,6 +1180,7 @@ GameObject:
   - component: {fileID: 1704553099}
   - component: {fileID: 1704553098}
   - component: {fileID: 1704553101}
+  - component: {fileID: 1704553102}
   m_Layer: 0
   m_Name: FinishLine
   m_TagString: Finish
@@ -1326,6 +1331,18 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &1704553102
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1704553097}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f87d0c2241f7bcf4f94cee39c05fbf6f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1797695462 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 9223147851817090084, guid: eb6ffd086b81bf84eada7a0869249518, type: 3}
@@ -1373,7 +1390,7 @@ GameObject:
   - component: {fileID: 1940129766}
   m_Layer: 0
   m_Name: RaftSprite
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
